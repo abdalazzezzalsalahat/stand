@@ -8,30 +8,31 @@ import StandMain from '../componunts/Main'
 
 
 export default function Home() {
-  const hourly_sales = [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36]
-  const [createCookie, hourly_sales]
+  const hourly_sales = [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36];
+  const [screateCookie, createCookieHandler] = useState([]);
   const [title, setTitle] = useState('');
   const [minCust, setMin] = useState('');
   const [maxCust, setMax] = useState('');
   const [location, setLocation] = useState('');
   const [avg, setAvg] = useState('');
-  const createCookie = {
-    id: createCookie.length -1,
-    minCust,
-    maxCust,
-    location,
-    avg,
+  const time = (hourly_sales) => {
+    const createCookie = {
+      id: createCookie.length -1,
+      minCust,
+      maxCust,
+      location,
+      avg,
     }
-    setcreateCookies = (state => ([... state, createCookie]))
+    setcreateCookies(state => ([... state, createCookie]))
   }
 
-  function createCookieHandler(e){
-    e.preventDefault();
-    setLocation(e.target.location.value)
-    setMin(e.target.minCust.value)
-    setMax(e.target.maxCust.value)
-    setAvg(e.target.avg.value)
-  }
+  // function createCookieHandler(e){
+  //   e.preventDefault();
+  //   setLocation(e.target.location.value)
+  //   setMin(e.target.minCust.value)
+  //   setMax(e.target.maxCust.value)
+  //   setAvg(e.target.avg.value)
+  // }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
